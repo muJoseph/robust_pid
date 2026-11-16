@@ -8,7 +8,7 @@ A floating-point C implementation of a parallel PID controller discretized using
 
 ```source``` folder contains the driver files. Implement platform specific types in ```platform_types.h```.
 
-```sim``` folder contains [QSPICE](https://www.qorvo.com/design-hub/calculators-simulation/qspice) schematic(s) for validating the *robust_pid* driver.
+```sim``` folder contains [QSPICE](https://www.qorvo.com/design-hub/calculators-simulation/qspice) schematic(s) for [validating](https://www.mujoseph.com/projects/robust-pid#validation) the *robust_pid* driver.
 
 # Usage
 
