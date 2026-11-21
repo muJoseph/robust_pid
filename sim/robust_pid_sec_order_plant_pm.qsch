@@ -1,0 +1,171 @@
+ÿØÿÛ«schematic
+  «component (-2300,1900) 0 0
+    «symbol
+      «type: Ø(.DLL)»
+      «shorted pins: false»
+      «rect (-700,800) (1200,-1000) 0 0 0 0x4000000 0x4000000 -1 1 -1»
+      «text (250,600) 1 12 0 0x1000000 -1 -1 "X1"»
+      «text (250,500) 0.681 13 0 0x1000000 -1 -1 "robust_pid"»
+      «text (250,200) 0.681 13 0 0x1000000 -1 -1 "float Kp=Kp"»
+      «text (250,50) 0.681 13 0 0x1000000 -1 -1 "float Ki=Ki"»
+      «text (300,-100) 0.681 13 0 0x1000000 -1 -1 "float Kd=Kd"»
+      «text (200,-250) 0.681 13 0 0x1000000 -1 -1 "float T=1/f_clk"»
+      «text (350,-400) 0.681 13 0 0x1000000 -1 -1 "float LPF_3dB=LPF_3dB_Hz"»
+      «pin (800,-1000) (0,0) 1 14 3 0x0 -1 "gnd"»
+      «pin (-700,600) (0,0) 1 7 129 0x0 -1 "r_set"»
+      «pin (-700,200) (0,0) 1 7 129 0x0 -1 "y_fb"»
+      «pin (-700,-600) (0,0) 1 7 17 0x0 -1 "clk"»
+      «pin (1200,600) (0,0) 1 11 130 0x0 -1 "cntrl"»
+    »
+  »
+  «component (-3600,700) 0 0
+    «symbol V
+      «type: V»
+      «description: Independent Voltage Source»
+      «shorted pins: false»
+      «line (0,-130) (0,-200) 0 0 0x1000000 -1 -1»
+      «line (0,200) (0,130) 0 0 0x1000000 -1 -1»
+      «rect (-25,77) (25,73) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+      «rect (-2,50) (2,100) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+      «rect (-25,-73) (25,-77) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+      «ellipse (-130,130) (130,-130) 0 0 0 0x1000000 0x1000000 -1 -1»
+      «text (100,150) 1 7 0 0x1000000 -1 -1 "V1"»
+      «text (150,-600) 1 7 0 0x1000000 -1 -1 "pulse 0 1 0 10n 10n {dc_clk/f_clk} {1/f_clk}"»
+      «pin (0,200) (0,0) 1 0 0 0x0 -1 "+"»
+      «pin (0,-200) (0,0) 1 0 0 0x0 -1 "-"»
+    »
+  »
+  «component (1200,2400) 0 0
+    «symbol E
+      «type: E»
+      «description: Voltage Dependent Voltage Source»
+      «shorted pins: false»
+      «line (0,-130) (0,-200) 0 0 0x1000000 -1 -1»
+      «line (0,200) (0,130) 0 0 0x1000000 -1 -1»
+      «line (-200,100) (-150,100) 0 0 0x1000000 -1 -1»
+      «line (-109,71) (-150,100) 0 0 0x1000000 -1 -1»
+      «line (-200,-100) (-150,-100) 0 0 0x1000000 -1 -1»
+      «line (-109,-71) (-150,-100) 0 0 0x1000000 -1 -1»
+      «line (-160,80) (-160,50) 0 0 0x1000000 -1 -1»
+      «line (-175,65) (-145,65) 0 0 0x1000000 -1 -1»
+      «line (-175,-67) (-145,-67) 0 0 0x1000000 -1 -1»
+      «rect (-25,-73) (25,-77) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+      «rect (-25,77) (25,73) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+      «rect (-2,50) (2,100) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+      «ellipse (-130,130) (130,-130) 0 0 0 0x1000000 0x1000000 -1 -1»
+      «text (100,150) 1 7 0 0x1000000 -1 -1 "E1"»
+      «text (-200,-600) 0.794 7 0 0x1000000 -1 -1 "Laplace = Av*wn^2/(s^2+2*zeta*wn*s+wn^2)"»
+      «pin (0,200) (0,0) 1 0 0 0x0 -1 ""»
+      «pin (0,-200) (0,0) 1 0 0 0x0 -1 ""»
+      «pin (-200,100) (0,0) 1 0 0 0x0 -1 ""»
+      «pin (-200,-100) (0,0) 1 0 0 0x0 -1 ""»
+    »
+  »
+  «component (200,-400) 2 0
+    «symbol V
+      «type: V»
+      «description: Independent Voltage Source»
+      «shorted pins: false»
+      «line (0,-130) (0,-200) 0 0 0x1000000 -1 -1»
+      «line (0,200) (0,130) 0 0 0x1000000 -1 -1»
+      «rect (-25,77) (25,73) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+      «rect (-2,50) (2,100) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+      «rect (-25,-73) (25,-77) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+      «ellipse (-130,130) (130,-130) 0 0 0 0x1000000 0x1000000 -1 -1»
+      «text (130,0) 1 110 0 0x1000000 -1 -1 "Vperturb"»
+      «text (-130,0) 1 109 0 0x1000000 -1 -1 "0"»
+      «pin (0,200) (0,0) 1 0 0 0x0 -1 "+"»
+      «pin (0,-200) (0,0) 1 0 0 0x0 -1 "-"»
+    »
+  »
+  «component (-5400,2000) 0 0
+    «symbol V
+      «type: V»
+      «description: Independent Voltage Source»
+      «shorted pins: false»
+      «line (0,-130) (0,-200) 0 0 0x1000000 -1 -1»
+      «line (0,200) (0,130) 0 0 0x1000000 -1 -1»
+      «rect (-25,77) (25,73) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+      «rect (-2,50) (2,100) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+      «rect (-25,-73) (25,-77) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+      «ellipse (-130,130) (130,-130) 0 0 0 0x1000000 0x1000000 -1 -1»
+      «text (100,150) 1 7 0 0x1000000 -1 -1 "V2"»
+      «text (100,-150) 1 7 0 0x1000000 -1 -1 "DC 1"»
+      «pin (0,200) (0,0) 1 0 0 0x0 -1 "+"»
+      «pin (0,-200) (0,0) 1 0 0 0x0 -1 "-"»
+    »
+  »
+  «net (-1500,400) 1 13 0 "GND"»
+  «net (-3600,200) 1 13 0 "GND"»
+  «net (-3400,1300) 1 14 0 "clk"»
+  «net (400,2500) 1 14 0 "cntrl_digital"»
+  «net (1200,2000) 1 13 0 "GND"»
+  «net (1800,-400) 1 14 0 "out_digital"»
+  «net (-3400,2100) 1 14 0 "fb"»
+  «net (-5400,1500) 1 13 0 "GND"»
+  «net (-4900,2500) 1 14 0 "set_point"»
+  «junction (1200,2100)»
+  «wire (-1500,400) (-1500,900) "GND"»
+  «wire (-3600,200) (-3600,500) "GND"»
+  «wire (-3000,1300) (-3400,1300) "clk"»
+  «wire (-1100,2500) (400,2500) "cntrl_digital"»
+  «wire (1200,2100) (1200,2200) "GND"»
+  «wire (1200,2100) (1000,2100) "GND"»
+  «wire (1200,2000) (1200,2100) "GND"»
+  «wire (1000,2100) (1000,2300) "GND"»
+  «wire (1200,2600) (1200,2800) "out_digital"»
+  «wire (1200,2800) (4100,2800) "out_digital"»
+  «wire (-3900,-400) (-3900,2100) "fb"»
+  «wire (-3400,2100) (-3000,2100) "fb"»
+  «wire (400,2500) (1000,2500) "cntrl_digital"»
+  «wire (-3400,1300) (-3600,1300) "clk"»
+  «wire (-3600,1300) (-3600,900) "clk"»
+  «wire (4100,-400) (1800,-400) "out_digital"»
+  «wire (4100,2800) (4100,-400) "out_digital"»
+  «wire (1800,-400) (400,-400) "out_digital"»
+  «wire (0,-400) (-3900,-400) "fb"»
+  «wire (-3900,2100) (-3400,2100) "fb"»
+  «wire (-5400,2200) (-5400,2500) "set_point"»
+  «wire (-5400,1800) (-5400,1500) "GND"»
+  «wire (-3000,2500) (-4900,2500) "set_point"»
+  «wire (-5400,2500) (-4900,2500) "set_point"»
+  «rect (-4200,3300) (-300,0) 0 0 2 0x4000000 0x1000000 -1 0 -1»
+  «rect (-11250,5500) (-6550,1200) 0 0 2 0x4000000 0x1000000 -1 0 -1»
+  «rect (-11250,950) (-5100,-100) 0 0 2 0x4000000 0x1000000 -1 0 -1»
+  «rect (900,3300) (3800,1350) 0 0 2 0x4000000 0x1000000 -1 0 -1»
+  «rect (-11150,3350) (-8650,1400) 0 0 2 0x4000000 0x1000000 -1 0 -1»
+  «rect (-4450,4250) (5450,-750) 0 0 2 0x4000000 0x1000000 -1 0 -1»
+  «text (-11150,3950) 1 7 0 0x1000000 -1 -1 "ï»¿.param f_clk=f_bw*4.0 clk_duty_cycle=50"»
+  «text (-11140,4950) 1 7 1 0x1000000 -1 -1 "ï»¿.param Kp=0.5\n.param Ki=500\n.param Kd=0"»
+  «text (-11150,5350) 1 7 1 0x1000000 -1 -1 "ï»¿PID Gains"»
+  «text (-11150,4400) 1 7 0 0x1000000 -1 -1 "ï»¿.param LPF_3dB_Hz=f_clk/2"»
+  «text (-11200,850) 1 7 0 0x1000000 -1 -1 "ï»¿.param N=LPF_3dB_Hz*2*PI dc_clk = clk_duty_cycle/100"»
+  «text (-11250,5600) 1 7 1 0x258000 -1 -1 "ï»¿User Params (edit these)"»
+  «text (-11150,4550) 1 7 1 0x1000000 -1 -1 "ï»¿PID Controller Derivative Low Pass Filter Cutoff Frequency (Hz)"»
+  «text (-11250,1050) 1 7 1 0x1000000 -1 -1 "ï»¿Derived Params (should not edit these)"»
+  «text (-11150,4100) 1 7 1 0x1000000 -1 -1 "ï»¿Discrete PID Controller Clock Frequency (Hz) and Duty Cycle (%)"»
+  «text (-4200,3400) 1 7 1 0x1000000 -1 -1 "ï»¿Discrete PID Controller"»
+  «text (-11000,2950) 1 7 0 0x1000000 -1 -1 "ï»¿.param wn=2*PI*80"»
+  «text (-11000,2000) 1 7 0 0x1000000 -1 -1 "ï»¿.param zeta=0.6"»
+  «text (-11000,1600) 1 7 0 0x1000000 -1 -1 "ï»¿.param Av=1.0"»
+  «text (900,3400) 1 7 1 0x1000000 -1 -1 "ï»¿Plant"»
+  «text (-11150,3450) 1 7 1 0x1000000 -1 -1 "ï»¿Plant Parameters"»
+  «text (-11000,3150) 1 7 1 0x1000000 -1 -1 "ï»¿Natural Frequency (rad/s)"»
+  «text (-11000,2450) 1 7 1 0x1000000 -1 -1 "ï»¿Damping ratio\nzeta = 0, undamped\n0 < zeta < 1, underdamped\nzeta > 1, overdamped"»
+  «text (-11000,1750) 1 7 1 0x1000000 -1 -1 "ï»¿DC Gain"»
+  «text (-4450,4400) 1 7 1 0x1000000 -1 -1 "ï»¿Discrete"»
+  «text (-9340,5100) 1 7 0 0x1000000 -1 -1 "ï»¿;PID Gains\n.param Kp=1.0\n.param Ki=300.0\n.param Kd=1m"»
+  «text (-11200,351) 1 7 0 0x1000000 -1 -1 "ï»¿.param wb = wn*sqrt(1-(2*zeta^2) + sqrt((2*zeta^2-1)^2 +1)) f_bw = wb/(2*PI)"»
+  «text (-4500,5700) 1 7 0 0x1000000 -1 -1 "ï»¿;AC analysis (.bode)\n.bode Vperturb t_sim 10 0.8*f_clk\n.options bodein=fb bodeout=out_digital"»
+  «text (-4500,5250) 1 7 0 0x1000000 -1 -1 "ï»¿.param t_sim = 300m"»
+  «text (-11200,550) 1 7 1 0x1000000 -1 -1 "ï»¿Plant bandwidth (rad/s and Hz)"»
+  «text (-150,5700) 1 7 0 0x1000000 -1 -1 "ï»¿.meas f_gc find freq when mag(TransferFunction) = 1"»
+  «text (-150,5900) 1 7 1 0x1000000 -1 -1 "ï»¿Measure the gain cross over frequency (f_gc)"»
+  «text (-150,5300) 1 7 0 0x1000000 -1 -1 "ï»¿.meas theta_gc find Phase(TransferFunction) at f_gc"»
+  «text (-150,5500) 1 7 1 0x1000000 -1 -1 "ï»¿Measure the phase, theta_gc, of the open-loop transfer function at the gain cross over frequency, f_gc"»
+  «text (-11250,-450) 1 7 0 0x1000000 -1 -1 "ï»¿.display f_clk='f_clk'"»
+  «text (-150,4950) 1 7 0 0x1000000 -1 -1 "ï»¿.meas phase_margin PARAM theta_gc + 180.0"»
+  «text (-11250,-250) 1 7 1 0x1000000 -1 -1 "ï»¿Display parameters to Output Window->Simulation"»
+  «text (-150,5100) 1 7 1 0x1000000 -1 -1 "ï»¿Measure the phase margin of the system"»
+»
+
