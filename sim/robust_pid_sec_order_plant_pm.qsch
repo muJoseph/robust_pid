@@ -161,10 +161,10 @@
   «text (-850,5600) 1 7 0 0x1000000 -1 -1 "ï»¿.meas f_gc find freq when mag(-TransferFunction) = 1"»
   «text (-850,5800) 1 7 1 0x1000000 -1 -1 "ï»¿Measure the gain cross over frequency (f_gc)"»
   «text (-850,5200) 1 7 0 0x1000000 -1 -1 "ï»¿.meas theta_gc find Phase(-TransferFunction) at f_gc"»
-  «text (-850,5400) 1 7 1 0x1000000 -1 -1 "ï»¿Measure the phase, theta_gc, of the open-loop transfer function at the gain cross over frequency, f_gc"»
+  «text (-850,5400) 1 7 1 0x1000000 -1 -1 "ï»¿Measure the phase, theta_gc, of the open-loop transfer function, G(s)H(s), at the gain cross over frequency, f_gc"»
   «text (-850,4850) 1 7 0 0x1000000 -1 -1 "ï»¿.meas phase_margin PARAM theta_gc + 180.0"»
   «text (-850,5000) 1 7 1 0x1000000 -1 -1 "ï»¿Measure the phase margin of the system"»
   «text (6550,2700) 1 7 0 0x1000000 -1 -1 "ï»¿."»
-  «text (-850,6300) 1 7 1 0xff -1 -1 "ï»¿Note the use of -TransferFunction to accurately express the open-loop transfer function, G(s) = -out_digital/fb.\nThe 180 degree phase inversion is due to the negative feedback from the summing junction, E(s) = set_point - fb = R(S) - Y(S).\nAdd -ve to TransferFunction bode plot to follow this convention."»
+  «text (-850,6300) 1 7 1 0xff -1 -1 "ï»¿Note the use of -TransferFunction to accurately express the open-loop transfer function, G(s)H(s) = -fb/out_digital.\nThe 180 degree phase inversion is due to the negative feedback from the summing junction, E(s) = set_point - fb = R(S) - Y(S).\nAdd -ve to TransferFunction bode plot to follow this convention."»
 »
 
