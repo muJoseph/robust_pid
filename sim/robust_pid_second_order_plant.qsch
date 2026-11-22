@@ -87,7 +87,7 @@
       «pin (-200,-100) (0,0) 1 0 0 0x0 -1 ""»
     »
   »
-  «component (-7000,-1800) 0 0
+  «component (-7800,-1600) 0 0
     «symbol V
       «type: V»
       «description: Independent Voltage Source»
@@ -99,7 +99,7 @@
       «rect (-25,-73) (25,-77) 0 0 0 0x1000000 0x3000000 -1 0 -1»
       «ellipse (-130,130) (130,-130) 0 0 0 0x1000000 0x1000000 -1 -1»
       «text (100,150) 1 7 0 0x1000000 -1 -1 "V3"»
-      «text (100,-150) 1 7 0 0x1000000 -1 -1 "PULSE 0 1 25m 50m 50m 1 2 1"»
+      «text (100,-150) 1 7 0 0x1000000 -1 -1 "PULSE 0 1 25m t_rise t_rise 1 2 1"»
       «pin (0,200) (0,0) 1 0 0 0x0 -1 "+"»
       «pin (0,-200) (0,0) 1 0 0 0x0 -1 "-"»
     »
@@ -156,12 +156,12 @@
   «net (100,-2300) 1 14 0 "cntrl_analog"»
   «net (1200,2000) 1 13 0 "GND"»
   «net (1800,-400) 1 14 0 "out_digital"»
-  «net (-7000,-2400) 1 13 0 "GND"»
+  «net (-7800,-2200) 1 13 0 "GND"»
   «net (1400,-3200) 1 13 0 "GND"»
   «net (-3900,-2600) 1 14 0 "error"»
   «net (4200,-2400) 1 14 0 "out_analog"»
   «net (-4200,-4600) 1 13 0 "GND"»
-  «net (-7000,-1100) 1 7 0 "set_point"»
+  «net (-7800,-900) 1 7 0 "set_point"»
   «junction (1400,-3100)»
   «junction (1200,2100)»
   «junction (-2900,-3000)»
@@ -186,7 +186,7 @@
   «wire (-3900,-400) (-3900,2100) "out_digital"»
   «wire (-3900,2100) (-3000,2100) "out_digital"»
   «wire (400,2500) (1000,2500) "cntrl_digital"»
-  «wire (-7000,-2000) (-7000,-2400) "GND"»
+  «wire (-7800,-1800) (-7800,-2200) "GND"»
   «wire (1400,-3100) (1400,-3000) "GND"»
   «wire (1400,-3100) (1200,-3100) "GND"»
   «wire (1400,-3200) (1400,-3100) "GND"»
@@ -205,21 +205,19 @@
   «wire (-3600,1300) (-3600,900) "clk"»
   «wire (4100,-400) (1800,-400) "out_digital"»
   «wire (4100,2800) (4100,-400) "out_digital"»
-  «wire (-7000,-1100) (-7000,-900) "set_point"»
-  «wire (-7000,-1600) (-7000,-1100) "set_point"»
+  «wire (-7800,-900) (-7800,-700) "set_point"»
+  «wire (-7800,-1400) (-7800,-900) "set_point"»
   «rect (-3600,-1950) (-450,-3550) 0 0 2 0x4000000 0x1000000 -1 0 -1»
   «rect (-4200,3300) (-300,0) 0 0 2 0x4000000 0x1000000 -1 0 -1»
   «rect (-10850,5450) (-6150,1150) 0 0 2 0x4000000 0x1000000 -1 0 -1»
-  «rect (-10800,900) (-6200,250) 0 0 2 0x4000000 0x1000000 -1 0 -1»
+  «rect (-10800,900) (-4650,200) 0 0 2 0x4000000 0x1000000 -1 0 -1»
   «rect (900,3300) (3800,1350) 0 0 2 0x4000000 0x1000000 -1 0 -1»
   «rect (750,-1850) (3650,-3800) 0 0 2 0x4000000 0x1000000 -1 0 -1»
   «rect (-4450,-1350) (5050,-5300) 0 0 2 0x4000000 0x1000000 -1 0 -1»
   «rect (-10750,3300) (-8250,1350) 0 0 2 0x4000000 0x1000000 -1 0 -1»
   «rect (-4450,4250) (5450,-750) 0 0 2 0x4000000 0x1000000 -1 0 -1»
-  «text (-10750,3900) 1 7 0 0x1000000 -1 -1 "ï»¿.param f_clk=2K clk_duty_cycle=10"»
-  «text (-10740,4900) 1 7 1 0x1000000 -1 -1 "ï»¿.param Kp=0.5\n.param Ki=500\n.param Kd=0"»
-  «text (-10750,5300) 1 7 1 0x1000000 -1 -1 "ï»¿PID Gains"»
-  «text (-10750,4350) 1 7 0 0x1000000 -1 -1 "ï»¿.param LPF_3dB_Hz=1K"»
+  «text (-10750,3900) 1 7 0 0x1000000 -1 -1 "ï»¿.param f_clk=100.0*f_bw clk_duty_cycle=10"»
+  «text (-10750,4350) 1 7 0 0x1000000 -1 -1 "ï»¿.param LPF_3dB_Hz=f_clk/2"»
   «text (-3600,-1800) 1 7 1 0x1000000 -1 -1 "ï»¿Analog PID Controller"»
   «text (-10750,800) 1 7 0 0x1000000 -1 -1 "ï»¿.param N=LPF_3dB_Hz*2*PI dc_clk = clk_duty_cycle/100"»
   «text (-10850,5550) 1 7 1 0x258000 -1 -1 "ï»¿User Params (edit these)"»
@@ -238,7 +236,12 @@
   «text (-10600,2400) 1 7 1 0x1000000 -1 -1 "ï»¿Damping ratio\nzeta = 0, undamped\n0 < zeta < 1, underdamped\nzeta > 1, overdamped"»
   «text (-10600,1700) 1 7 1 0x1000000 -1 -1 "ï»¿DC Gain"»
   «text (-4450,4400) 1 7 1 0x1000000 -1 -1 "ï»¿Discrete"»
-  «text (-500,5400) 1 7 0 0x1000000 -1 -1 "ï»¿; Transient analysis (.tran)\n.tran 300m\n.plot tran V(set_point) V(out_digital)\n.plot tran V(set_point) V(out_analog)\n.plot tran V(cntrl_digital) V(cntrl_analog)"»
-  «text (-8940,5050) 1 7 0 0x1000000 -1 -1 "ï»¿;PID Gains\n.param Kp=2.0\n.param Ki=1000\n.param Kd=0.0001"»
+  «text (-4450,5350) 1 7 0 0x1000000 -1 -1 "ï»¿; Transient analysis (.tran)\n.tran 300m\n.plot tran V(set_point) V(out_digital)\n.plot tran V(set_point) V(out_analog)\n.plot tran V(cntrl_digital) V(cntrl_analog)"»
+  «text (-10750,3650) 1 7 0 0x1000000 -1 -1 "ï»¿.param t_rise = 1Âµ"»
+  «text (-10790,5050) 1 7 0 0x1000000 -1 -1 "ï»¿;PID Gains\n.param Kp=2.0\n.param Ki=200\n.param Kd=0.0001"»
+  «text (-10750,401) 1 7 0 0x1000000 -1 -1 "ï»¿.param wb = wn*sqrt(1-(2*zeta^2) + sqrt((2*zeta^2-1)^2 +1)) f_bw = wb/(2*PI)"»
+  «text (-10750,600) 1 7 1 0x1000000 -1 -1 "ï»¿Plant bandwidth (rad/s and Hz)"»
+  «text (-10800,-150) 1 7 0 0x1000000 -1 -1 "ï»¿.display f_clk='f_clk'"»
+  «text (-10800,50) 1 7 1 0x1000000 -1 -1 "ï»¿Display parameters to Output Window->Simulation"»
 »
 

@@ -135,9 +135,7 @@
   «rect (900,3300) (3800,1350) 0 0 2 0x4000000 0x1000000 -1 0 -1»
   «rect (-11150,3350) (-8650,1400) 0 0 2 0x4000000 0x1000000 -1 0 -1»
   «rect (-4450,4250) (5450,-750) 0 0 2 0x4000000 0x1000000 -1 0 -1»
-  «text (-11150,3950) 1 7 0 0x1000000 -1 -1 "ï»¿.param f_clk=f_bw*4.0 clk_duty_cycle=50"»
-  «text (-11140,4950) 1 7 1 0x1000000 -1 -1 "ï»¿.param Kp=0.5\n.param Ki=500\n.param Kd=0"»
-  «text (-11150,5350) 1 7 1 0x1000000 -1 -1 "ï»¿PID Gains"»
+  «text (-11150,3950) 1 7 0 0x1000000 -1 -1 "ï»¿.param f_clk=100*f_bw clk_duty_cycle=10"»
   «text (-11150,4400) 1 7 0 0x1000000 -1 -1 "ï»¿.param LPF_3dB_Hz=f_clk/2"»
   «text (-11200,850) 1 7 0 0x1000000 -1 -1 "ï»¿.param N=LPF_3dB_Hz*2*PI dc_clk = clk_duty_cycle/100"»
   «text (-11250,5600) 1 7 1 0x258000 -1 -1 "ï»¿User Params (edit these)"»
@@ -154,10 +152,8 @@
   «text (-11000,2450) 1 7 1 0x1000000 -1 -1 "ï»¿Damping ratio\nzeta = 0, undamped\n0 < zeta < 1, underdamped\nzeta > 1, overdamped"»
   «text (-11000,1750) 1 7 1 0x1000000 -1 -1 "ï»¿DC Gain"»
   «text (-4450,4400) 1 7 1 0x1000000 -1 -1 "ï»¿Discrete"»
-  «text (-9340,5100) 1 7 0 0x1000000 -1 -1 "ï»¿;PID Gains\n.param Kp=1.0\n.param Ki=300.0\n.param Kd=1m"»
   «text (-11200,351) 1 7 0 0x1000000 -1 -1 "ï»¿.param wb = wn*sqrt(1-(2*zeta^2) + sqrt((2*zeta^2-1)^2 +1)) f_bw = wb/(2*PI)"»
-  «text (-4500,5700) 1 7 0 0x1000000 -1 -1 "ï»¿;AC analysis (.bode)\n.bode Vperturb t_sim 10 0.8*f_clk\n.options bodein=fb bodeout=out_digital"»
-  «text (-4500,5250) 1 7 0 0x1000000 -1 -1 "ï»¿.param t_sim = 300m"»
+  «text (-4500,5400) 1 7 0 0x1000000 -1 -1 "ï»¿;AC analysis (.bode)\n.bode Vperturb t_sim 10 0.8*f_clk\n.options bodein=fb bodeout=out_digital\n.param t_sim = 300m"»
   «text (-11200,550) 1 7 1 0x1000000 -1 -1 "ï»¿Plant bandwidth (rad/s and Hz)"»
   «text (-150,5700) 1 7 0 0x1000000 -1 -1 "ï»¿.meas f_gc find freq when mag(TransferFunction) = 1"»
   «text (-150,5900) 1 7 1 0x1000000 -1 -1 "ï»¿Measure the gain cross over frequency (f_gc)"»
@@ -167,5 +163,6 @@
   «text (-150,4950) 1 7 0 0x1000000 -1 -1 "ï»¿.meas phase_margin PARAM theta_gc + 180.0"»
   «text (-11250,-250) 1 7 1 0x1000000 -1 -1 "ï»¿Display parameters to Output Window->Simulation"»
   «text (-150,5100) 1 7 1 0x1000000 -1 -1 "ï»¿Measure the phase margin of the system"»
+  «text (-11190,5100) 1 7 0 0x1000000 -1 -1 "ï»¿;PID Gains\n.param Kp=2.0\n.param Ki=200\n.param Kd=0.0001"»
 »
 
